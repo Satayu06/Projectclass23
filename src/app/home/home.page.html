@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+      ข้อมูลนักเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-label style="text-align: center;" class="margin">
+    <h1><b>กรอกข้อมูลนักเรียนชั้นปวช.2/3</b></h1>
+  </ion-label>
+  <ion-item>
+    <ion-label position="floating"><b>รหัสนักเรียน</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtidstu"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>ชื่อ-สกุล</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>ชื่อเล่น</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtnname"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>อายุ</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtage"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>เบอร์โทรศัพท์</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtphone"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>ที่อยู่</b></ion-label>
+    <ion-input type="text" [(ngModel)]="txtaddress"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">สถานะภาพ</ion-label>
+      <ion-select aria-label="สถานะ" interface="popobver" slot="end" [(ngModel)]="txtstatus">
+        <ion-select-option value="โสด">โสด</ion-select-option>
+        <ion-select-option value="สมรส">สมรส</ion-select-option>
+        <ion-select-option value="หย่าร้าง">หย่าร้าง</ion-select-option>
+        <ion-select-option value="มีแฟน">มีแฟน</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div style="text-align: center;" color="primary" class="center">
+    <ion-button (click)="addmember()"><b>บันทึกข้อมูล</b></ion-button>
+    <ion-button slot="end" (click)="showdata()" color="warning">ดูข้อมูล</ion-button>
+  </div>
+
+
+</ion-content>
